@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>Search Widget</title>
+  <title>App with Polar Chart</title>
 
+  <!-- ArcGIS and Chart.js styles/scripts -->
   <link rel="stylesheet" href="css/searchwidget.css">
   <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,8 +16,11 @@
 <body>
   <div id="bcMain">
     <div id="cpCenter"></div>
-    <!-- Add the canvas here -->
-    <canvas id="polarChart" width="400" height="400"></canvas>
+
+    <!-- Chart container -->
+    <div id="chartContainer">
+      <canvas id="polarChart" width="400" height="400"></canvas>
+    </div>
   </div>
 </body>
 </html>
