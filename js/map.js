@@ -4,20 +4,23 @@ var mapMain;
 require([
   "esri/Map",
   "esri/views/MapView",
-  "esri/widgets/Search"],
-  function (Map, MapView, Search
-  ) {
+  "esri/layers/FeatureLayer",
+  "esri/rest/support/Query",
+  "esri/widgets/Sketch",
+  "esri/widgets/Search",
+  "esri/layers/GraphicsLayer"
+], function(Map, MapView, FeatureLayer, Query, Sketch, Search, GraphicsLayer) {
 
     // Create the map
     mapMain = new Map({
-      basemap: "topo"
+      basemap: "topo-vector"
     });
 
     var view = new MapView({
       container: "cpCenter",  // Reference to the scene div created in step 5
       map: mapMain,  // Reference to the map object created before the scene
-      zoom: 13,  // Sets zoom level based on level of detail (LOD)
-      center: [-117.19, 34.05]  // Sets center point of view using longitude,latitude
+      zoom: 6,  // Sets zoom level based on level of detail (LOD)
+      center: [-1.5, 52.5]  // Sets center point of view using longitude,latitude
     });
 
     /*
