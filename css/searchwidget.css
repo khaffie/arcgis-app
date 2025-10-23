@@ -1,3 +1,4 @@
+/* Reset and layout */
 html, body, #bcMain, #cpCenter {
   height: 100%;
   width: 100%;
@@ -8,31 +9,30 @@ html, body, #bcMain, #cpCenter {
   overflow: hidden;
 }
 
+/* Map container */
 #cpCenter {
   position: relative;
-  height: 70%;
+  height: 100%;
+  width: 100%;
 }
 
-#chartContainer {
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f4f4f4;
-  border-top: 1px solid #ccc;
-  padding: 20px;
-}
-
-#polarChart {
+/* Chart overlay container */
+#chartOverlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+  height: 320px;
+  background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid #ccc;
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 400px;
-  width: 100%;
-  height: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 10;
 }
 
-
-
-
+/* Polar chart canvas */
+#polarChart {
+  width: 100%;
+  height: 100%;
+}
