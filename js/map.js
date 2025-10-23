@@ -35,5 +35,12 @@ require([
       position: "top-right"
     });
 
+    var layer = new FeatureLayer({
+      url:"https://services2.arcgis.com/mHXjwgl3OARRqqD4/arcgis/rest/services/Forestry_England_Quarries/FeatureServer/0",
+      opacity: 0.7
+    });
+
+    map.add (layer)
+
 
   });
