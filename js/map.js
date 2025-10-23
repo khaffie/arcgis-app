@@ -40,7 +40,7 @@ require([
       opacity: 0.7
     });
 
-    map.add (layer)
+    mapMain.add (layer)
 
 
   });
